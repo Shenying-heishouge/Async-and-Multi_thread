@@ -81,12 +81,11 @@ public class BookStore
         // 提示：创建多个 Task 调用 CheckoutAsync，并传入不同书名和数量
         var tasks = new List<Task>
         {
+            CheckoutAsync("C#入门",2),
             CheckoutAsync("C#入门",3),
-            CheckoutAsync("异步编程",3),
             CheckoutAsync("异步编程",1),
-            CheckoutAsync("C#入门",6),
-            CheckoutAsync("异步编程",4),
-            CheckoutAsync("C#入门",4)
+            CheckoutAsync("异步编程",2),
+            CheckoutAsync("异步编程",3)
         };
 
         await Task.WhenAll(tasks);
